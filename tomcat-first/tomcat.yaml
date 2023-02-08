@@ -74,7 +74,7 @@
         group: "{{ group_name }}"
     - name: copy the host manager app context file
       ansible.builtin.copy:
-        src: hostmanager-context.xml
+        src: hostmaneger-context.xml
         dest: "{{ user_home }}/latest/webapps/host-manager/META-INF/context.xml"
         owner: "{{ user_name }}"
         group: "{{ group_name }}"
