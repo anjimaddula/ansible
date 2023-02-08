@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: install apache
-      apt.builtin.apt:
+      ansible.builtin.apt:
         name: apache2
         update_cache: yes
         state: present
