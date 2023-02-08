@@ -62,8 +62,8 @@
         state: started
     - name: copy the users xml
       ansible.builtin.copy:
-        src: tomcat-users.xml
-        dest: "{{ user_home }}/latest/conf/tomcat-users.xml"
+        src: tomcat-user.xml
+        dest: "{{ user_home }}/latest/conf/tomcat-user.xml"
         owner: "{{ user_name }}"
         group: "{{ group_name }}"
     - name: copy the manager app context file
