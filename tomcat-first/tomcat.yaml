@@ -20,18 +20,18 @@
         home: /opt/tomcat
         shell: /bin/bash
         state: present
-    - name: download tomcat 10.1.4
+    - name: download tomcat 10.1.5
       ansible.builtin.get_url:
-        url: https://www-eu.apache.org/dist/tomcat/tomcat-10/v10.1.4/bin/apache-tomcat-10.1.4.tar.gz
-        dest: /tmp/apache-tomcat-10.1.4.tar.gz
-    - name: extract tomcat 10.1.4
+        url: https://www-eu.apache.org/dist/tomcat/tomcat-10/v10.1.5/bin/apache-tomcat-10.1.5.tar.gz
+        dest: /tmp/apache-tomcat-10.1.5.tar.gz
+    - name: extract tomcat 10.1.5
       ansible.builtin.unarchive:
-        src: https://www-eu.apache.org/dist/tomcat/tomcat-10/v10.1.4/bin/apache-tomcat-10.1.4.tar.gzgit
+        src: https://www-eu.apache.org/dist/tomcat/tomcat-10/v10.1.5/bin/apache-tomcat-10.1.5.tar.gz
         remote_src: yes
         dest: /opt/tomcat
     - name: create symbolic link
       ansible.builtin.file:
-        src: /opt/tomcat/apache-tomcat-10.1.4
+        src: /opt/tomcat/apache-tomcat-10.1.5
         dest: /opt/tomcat/latest
         state: link
     - name: change permission
