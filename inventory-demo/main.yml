@@ -1,0 +1,8 @@
+---
+name: test inventory
+host: all
+become: yes
+tasks: 
+  - name: print somthing
+    ansible.builtin.debug:
+      var: name
