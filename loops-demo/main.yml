@@ -1,0 +1,9 @@
+---
+name: install utilites 
+hosts: yes
+tasks: 
+  - name: install utilites 
+    ansible.builtin.packages:
+      name: "{{ item }}"
+      state: yes
+      loop: "{{ packages }}"
